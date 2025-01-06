@@ -29,9 +29,9 @@ function App() {
   useEffect(() => {
     axios.get("http://localhost:3031/flights")
       .then((response) => {
-
+        data = response.data;
         setFlights(response.data);
-        console.log("Available flights: ", flights);
+        console.log("Available flights: ", data);
       })
       .catch((err) => console.log("Error when fetching flights: ", err));
   }, []);
@@ -41,17 +41,38 @@ function App() {
   }, [flights]); 
 
   
-  const filterByTransfer = useCallback((amount) => {
-    if(!data || data.length === 0){
-      console.error("Data is empty!");
-      return;
+  const filterByTransfer = useCallback(async (selectedTransfers) => {
+    // if(!data || data.length === 0){
+    //   console.error("Data is empty!");
+    //   return;
+    // }
+    try{
+      const res = await axios.get("http://localhost:3031/flights");
+      const resData = await res.data;
+      const transferCounts = selectedTransfers.map(option => {
+        if (option === "1 пересадка") return 1;
+        if (option === "2 пересадки") return 2;
+        if (option === "3 пересадки") return 3;
+        return 0;
+      });
+    
+      // Filter the flights based on the selected transfer counts
+      const filteredData = resData.filter((item) =>
+        transferCounts.includes(item.transfers.length)
+      );
+    
+      setFlights(filteredData);
+    }catch(err){
+      console.err("Error during filtering data: ", err);
     }
-    var filteredData = [...data].filter((item, id) => 
-      item["transfers"].length === amount
-    );
-    setFlights(filteredData);
 
-  }, [])
+    // var filteredData = [...data].filter((item, id) => 
+    //   item["transfers"].length === amount
+    // );
+    // setFlights(filteredData);
+   
+
+  }, [data])
   const contextValues = useMemo(()=>({
     data,
     flights,

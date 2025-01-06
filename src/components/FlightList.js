@@ -41,7 +41,7 @@ const FlightList = () => {
       </Space>
 
         {
-        [...flights].map((flight) => <FlightCard item={flight} />)
+        [...flights].map((flight, index) => <FlightCard key={index} item={flight} />)
         }
     </div>
 

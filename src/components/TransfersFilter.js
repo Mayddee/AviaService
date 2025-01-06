@@ -5,7 +5,7 @@ import { context } from "../App";
 
 const { Group: CheckboxGroup } = Checkbox;
 
-const plainOptions =[ "1 пересадка", "2 пересадки", "3 пересадки"];
+const plainOptions =["Без пересадок", "1 пересадка", "2 пересадки", "3 пересадки"];
 const defaultcheckedList = ["1 пересадка", "2 пересадки"];
 const TranfersFilter = () => {
     const [checkedList, setCheckedList] = useState(defaultcheckedList);
@@ -16,12 +16,19 @@ const TranfersFilter = () => {
       flights,
       setFlights,
       filterByTransfer } = useContext(context);
+
     const onChange = (list) => {
+
         setCheckedList(list);
+        filterByTransfer(list);
         
+
     }
     const onCheckAllChange = (e) => {
-        setCheckedList(e.target.checked ? plainOptions : []);
+      const newCheckedList = e.target.checked ? plainOptions : [];
+
+        setCheckedList(newCheckedList);
+        filterByTransfer(newCheckedList);
     }
 
    
