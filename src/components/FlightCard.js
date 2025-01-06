@@ -34,8 +34,7 @@ const FlightCard = ({ item }) => {
   return (
     <Card
     style={{
-      width: '100%',
-      maxWidth: 600,
+      width: '600px',
       margin: '20px',
       borderRadius: '10px',
       boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
@@ -45,15 +44,15 @@ const FlightCard = ({ item }) => {
     }}
     hoverable
   >
-    <Row gutter={16} style={{ flex: 1 }}>
-      <Col span={8}>
+    <Row  style={{ flex: 2 }}>
+      {/* <Col span={8}>
         <Image
           width={50}
           src={item.airline_logo}
           alt={item.airline}
           style={{ borderRadius: '5px' }}
         />
-      </Col>
+      </Col> */}
       <Col span={16} style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
         <Typography.Text strong style={{ fontSize: '18px', color: '#1890ff' }}>
           {item.airline}
@@ -66,11 +65,8 @@ const FlightCard = ({ item }) => {
         </Typography.Text>
         <Typography.Text style={{ color: '#333' }}>Duration: {formatDuration(item.duration)}</Typography.Text>
       </Col>
-    </Row>
-
-    <Divider />
-
-    <div>{item.transfers.length > 0 &&  <div>{item.transfers.length} пересадки</div>} {renderTransfers(item.transfers)}</div>
+      
+      <div>{item.transfers.length > 0 &&  <div>{item.transfers.length} пересадки</div>} {renderTransfers(item.transfers)}</div>
 
     <Row style={{ marginTop: '10px', flexDirection: 'row', width: '100%' }}>
       <Col span={12}>
@@ -84,6 +80,11 @@ const FlightCard = ({ item }) => {
         </Typography.Text>
       </Col>
     </Row>
+    </Row>
+
+    <Divider />
+
+    
   </Card>
   );
 };

@@ -65,11 +65,21 @@ function App() {
   return (
     <div className="App">
       <h1>App</h1>
+      
       <context.Provider value={contextValues}>
+        <div style={{
+          display: "flex",
+          flexWrap: "nowrap",
+          flexDirection: "row",
+          justifyContent: "space-around"
+        }}>
         <TranfersFilter />
         {
           flights &&  <FlightList />
         }
+
+        </div>
+        
        
       </context.Provider>
       
