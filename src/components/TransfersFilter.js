@@ -1,5 +1,7 @@
-import React, {useState} from "react";
+import React, {useContext, useState} from "react";
 import { Card, List, Checkbox, Divider, Typography  } from 'antd';
+import { useColStyle } from "antd/es/grid/style";
+import { context } from "../App";
 
 const { Group: CheckboxGroup } = Checkbox;
 
@@ -9,14 +11,20 @@ const TranfersFilter = () => {
     const [checkedList, setCheckedList] = useState(defaultcheckedList);
     const checkAll = plainOptions.length === checkedList.length;
     const indeterminate = checkedList.length > 0  && checkedList.length < plainOptions.length;
+
+    const { data,
+      flights,
+      setFlights,
+      filterByTransfer } = useContext(context);
     const onChange = (list) => {
         setCheckedList(list);
+        
     }
     const onCheckAllChange = (e) => {
         setCheckedList(e.target.checked ? plainOptions : []);
     }
 
-    const data = [...plainOptions];
+   
     return <div >
         {/* <Checkbox indeterminate={indeterminate} onChange={onCheckAllChange} checked={checkAll}>
             Все
@@ -37,7 +45,7 @@ const TranfersFilter = () => {
           }}
        
         bordered
-        dataSource={data}
+        dataSource={[...plainOptions]}
         renderItem={(item) => (
           <List.Item>
             <Checkbox

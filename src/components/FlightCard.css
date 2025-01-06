@@ -1,0 +1,38 @@
+.ant-card {
+    background-color: #f7f7f7;
+    border: none;
+    border-radius: 12px;
+    padding: 16px;
+  }
+  
+  .ant-typography {
+    font-size: 16px;
+    font-weight: bold;
+    color: #1890ff;
+  }
+  
+  .transfer-info {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #f0f8ff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .ant-typography {
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .ant-row {
+    padding-top: 10px;
+    font-weight: bold;
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .ant-col {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
