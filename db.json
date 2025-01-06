@@ -1,0 +1,453 @@
+{
+    "flights": [
+      {
+        "id": "F001",
+        "departure_airport": {
+          "name": "Almaty International Airport",
+          "id": "ALA",
+          "time": "2025-01-07T08:00:00"
+        },
+        "arrival_airport": {
+          "name": "Astana International Airport",
+          "id": "NQZ",
+          "time": "2025-01-07T14:00:00"
+        },
+        "duration": 360,
+        "airplane": "Boeing 737",
+        "airline": "Air Astana",
+        "airline_logo": "https://example.com/logos/air_astana.png",
+        "travel_class": "Economy",
+        "flight_number": "KC123",
+        "extensions": ["Wi-Fi", "In-flight entertainment"],
+        "ticket_also_sold_by": ["SkyScanner", "Expedia"],
+        "legroom": "31 inches",
+        "overnight": false,
+        "often_delayed_by_over_30_min": false,
+        "transfers": [
+          {
+            "departure_airport": {
+              "name": "Shymkent Airport",
+              "id": "CIT",
+              "time": "2025-01-07T10:00:00"
+            },
+            "arrival_airport": {
+              "name": "Karaganda Airport",
+              "id": "KGF",
+              "time": "2025-01-07T11:30:00"
+            },
+            "duration": 90,
+            "overnight": false
+          },
+          {
+            "departure_airport": {
+              "name": "Karaganda Airport",
+              "id": "KGF",
+              "time": "2025-01-07T12:30:00"
+            },
+            "arrival_airport": {
+              "name": "Astana International Airport",
+              "id": "NQZ",
+              "time": "2025-01-07T14:00:00"
+            },
+            "duration": 90,
+            "overnight": false
+          }
+        ],
+        "price": 120
+      },
+      {
+        "id": "F002",
+        "departure_airport": {
+          "name": "Almaty International Airport",
+          "id": "ALA",
+          "time": "2025-01-07T09:00:00"
+        },
+        "arrival_airport": {
+          "name": "Astana International Airport",
+          "id": "NQZ",
+          "time": "2025-01-07T11:30:00"
+        },
+        "duration": 150,
+        "airplane": "Airbus A320",
+        "airline": "FlyArystan",
+        "airline_logo": "https://example.com/logos/flyarystan.png",
+        "travel_class": "Economy",
+        "flight_number": "FA456",
+        "extensions": ["Extra baggage allowance"],
+        "ticket_also_sold_by": ["Kiwi.com", "Travelocity"],
+        "legroom": "30 inches",
+        "overnight": false,
+        "often_delayed_by_over_30_min": false,
+        "transfers": [],
+        "price": 100
+      },
+      {
+        "id": "F003",
+        "departure_airport": {
+          "name": "Almaty International Airport",
+          "id": "ALA",
+          "time": "2025-01-07T07:30:00"
+        },
+        "arrival_airport": {
+          "name": "Astana International Airport",
+          "id": "NQZ",
+          "time": "2025-01-07T13:00:00"
+        },
+        "duration": 330,
+        "airplane": "Boeing 757",
+        "airline": "SCAT Airlines",
+        "airline_logo": "https://example.com/logos/scat.png",
+        "travel_class": "Business",
+        "flight_number": "SC789",
+        "extensions": ["Lounge access", "Priority boarding"],
+        "ticket_also_sold_by": ["Orbitz", "Kayak"],
+        "legroom": "32 inches",
+        "overnight": false,
+        "often_delayed_by_over_30_min": true,
+        "transfers": [
+          {
+            "departure_airport": {
+              "name": "Aktobe Airport",
+              "id": "AKX",
+              "time": "2025-01-07T09:00:00"
+            },
+            "arrival_airport": {
+              "name": "Shymkent Airport",
+              "id": "CIT",
+              "time": "2025-01-07T10:30:00"
+            },
+            "duration": 90,
+            "overnight": false
+          },
+          {
+            "departure_airport": {
+              "name": "Shymkent Airport",
+              "id": "CIT",
+              "time": "2025-01-07T11:30:00"
+            },
+            "arrival_airport": {
+              "name": "Astana International Airport",
+              "id": "NQZ",
+              "time": "2025-01-07T13:00:00"
+            },
+            "duration": 90,
+            "overnight": false
+          }
+        ],
+        "price": 110
+      },
+      {
+        "id": "F004",
+        "departure_airport": {
+          "name": "Almaty International Airport",
+          "id": "ALA",
+          "time": "2025-01-07T10:00:00"
+        },
+        "arrival_airport": {
+          "name": "Astana International Airport",
+          "id": "NQZ",
+          "time": "2025-01-07T12:00:00"
+        },
+        "duration": 120,
+        "airplane": "Embraer 190",
+        "airline": "Bek Air",
+        "airline_logo": "https://example.com/logos/bek_air.png",
+        "travel_class": "Economy",
+        "flight_number": "Z9 204",
+        "extensions": ["No extensions available"],
+        "ticket_also_sold_by": ["CheapOair", "Booking.com"],
+        "legroom": "28 inches",
+        "overnight": false,
+        "often_delayed_by_over_30_min": false,
+        "transfers": [],
+        "price": 85
+      },
+      {
+        "id": "F005",
+        "departure_airport": {
+          "name": "Almaty International Airport",
+          "id": "ALA",
+          "time": "2025-01-07T11:00:00"
+        },
+        "arrival_airport": {
+          "name": "Astana International Airport",
+          "id": "NQZ",
+          "time": "2025-01-07T13:30:00"
+        },
+        "duration": 150,
+        "airplane": "Boeing 787",
+        "airline": "Qazaq Air",
+        "airline_logo": "https://example.com/logos/qazaq_air.png",
+        "travel_class": "Business",
+        "flight_number": "IQ 502",
+        "extensions": ["Extra baggage allowance"],
+        "ticket_also_sold_by": ["Expedia", "Momondo"],
+        "legroom": "34 inches",
+        "overnight": false,
+        "often_delayed_by_over_30_min": false,
+        "transfers": [],
+        "price": 150
+      },
+      {
+        "id": "F006",
+        "departure_airport": {
+          "name": "Almaty International Airport",
+          "id": "ALA",
+          "time": "2025-01-07T12:00:00"
+        },
+        "arrival_airport": {
+          "name": "Astana International Airport",
+          "id": "NQZ",
+          "time": "2025-01-07T14:30:00"
+        },
+        "duration": 150,
+        "airplane": "Airbus A320",
+        "airline": "FlyArystan",
+        "airline_logo": "https://example.com/logos/flyarystan.png",
+        "travel_class": "Economy",
+        "flight_number": "FA432",
+        "extensions": ["Extra baggage allowance"],
+        "ticket_also_sold_by": ["Kiwi.com", "Travelocity"],
+        "legroom": "30 inches",
+        "overnight": false,
+        "often_delayed_by_over_30_min": false,
+        "transfers": [],
+        "price": 115
+      },
+      {
+        "id": "F007",
+        "departure_airport": {
+          "name": "Almaty International Airport",
+          "id": "ALA",
+          "time": "2025-01-07T13:00:00"
+        },
+        "arrival_airport": {
+          "name": "Astana International Airport",
+          "id": "NQZ",
+          "time": "2025-01-07T15:30:00"
+        },
+        "duration": 150,
+        "airplane": "Airbus A330",
+        "airline": "Air Astana",
+        "airline_logo": "https://example.com/logos/air_astana.png",
+        "travel_class": "Economy",
+        "flight_number": "KC789",
+        "extensions": ["Wi-Fi", "In-flight entertainment"],
+        "ticket_also_sold_by": ["SkyScanner", "Expedia"],
+        "legroom": "31 inches",
+        "overnight": false,
+        "often_delayed_by_over_30_min": false,
+        "transfers": [],
+        "price": 130
+      },
+      {
+        "id": "F008",
+        "departure_airport": {
+          "name": "Almaty International Airport",
+          "id": "ALA",
+          "time": "2025-01-07T14:00:00"
+        },
+        "arrival_airport": {
+          "name": "Astana International Airport",
+          "id": "NQZ",
+          "time": "2025-01-07T16:30:00"
+        },
+        "duration": 150,
+        "airplane": "Airbus A320",
+        "airline": "FlyArystan",
+        "airline_logo": "https://example.com/logos/flyarystan.png",
+        "travel_class": "Economy",
+        "flight_number": "FA214",
+        "extensions": ["Extra baggage allowance"],
+        "ticket_also_sold_by": ["Kiwi.com", "Travelocity"],
+        "legroom": "30 inches",
+        "overnight": false,
+        "often_delayed_by_over_30_min": false,
+        "transfers": [],
+        "price": 95
+      },
+      {
+        "id": "F009",
+        "departure_airport": {
+          "name": "Almaty International Airport",
+          "id": "ALA",
+          "time": "2025-01-07T15:00:00"
+        },
+        "arrival_airport": {
+          "name": "Astana International Airport",
+          "id": "NQZ",
+          "time": "2025-01-07T17:30:00"
+        },
+        "duration": 150,
+        "airplane": "Airbus A321",
+        "airline": "Air Astana",
+        "airline_logo": "https://example.com/logos/air_astana.png",
+        "travel_class": "Business",
+        "flight_number": "KC903",
+        "extensions": ["Wi-Fi", "In-flight entertainment"],
+        "ticket_also_sold_by": ["SkyScanner", "Expedia"],
+        "legroom": "32 inches",
+        "overnight": false,
+        "often_delayed_by_over_30_min": false,
+        "transfers": [],
+        "price": 140
+      },
+      {
+        "id": "F010",
+        "departure_airport": {
+          "name": "Almaty International Airport",
+          "id": "ALA",
+          "time": "2025-01-07T16:00:00"
+        },
+        "arrival_airport": {
+          "name": "Astana International Airport",
+          "id": "NQZ",
+          "time": "2025-01-07T18:30:00"
+        },
+        "duration": 150,
+        "airplane": "Boeing 757",
+        "airline": "SCAT Airlines",
+        "airline_logo": "https://example.com/logos/scat.png",
+        "travel_class": "Business",
+        "flight_number": "SC123",
+        "extensions": ["Lounge access", "Priority boarding"],
+        "ticket_also_sold_by": ["Orbitz", "Kayak"],
+        "legroom": "32 inches",
+        "overnight": false,
+        "often_delayed_by_over_30_min": true,
+        "transfers": [],
+        "price": 135
+      },
+      {
+        "id": "F011",
+        "departure_airport": {
+          "name": "Almaty International Airport",
+          "id": "ALA",
+          "time": "2025-01-07T17:00:00"
+        },
+        "arrival_airport": {
+          "name": "Astana International Airport",
+          "id": "NQZ",
+          "time": "2025-01-07T19:30:00"
+        },
+        "duration": 150,
+        "airplane": "Airbus A330",
+        "airline": "Air Astana",
+        "airline_logo": "https://example.com/logos/air_astana.png",
+        "travel_class": "Economy",
+        "flight_number": "KC567",
+        "extensions": ["Wi-Fi", "In-flight entertainment"],
+        "ticket_also_sold_by": ["SkyScanner", "Expedia"],
+        "legroom": "31 inches",
+        "overnight": false,
+        "often_delayed_by_over_30_min": false,
+        "transfers": [],
+        "price": 80
+      },
+      {
+        "id": "F012",
+        "departure_airport": {
+          "name": "Almaty International Airport",
+          "id": "ALA",
+          "time": "2025-01-07T18:00:00"
+        },
+        "arrival_airport": {
+          "name": "Astana International Airport",
+          "id": "NQZ",
+          "time": "2025-01-07T20:30:00"
+        },
+        "duration": 150,
+        "airplane": "Boeing 737",
+        "airline": "FlyArystan",
+        "airline_logo": "https://example.com/logos/flyarystan.png",
+        "travel_class": "Economy",
+        "flight_number": "FA673",
+        "extensions": ["Extra baggage allowance"],
+        "ticket_also_sold_by": ["Kiwi.com", "Travelocity"],
+        "legroom": "30 inches",
+        "overnight": false,
+        "often_delayed_by_over_30_min": false,
+        "transfers": [],
+        "price": 92
+      },
+      {
+        "id": "F013",
+        "departure_airport": {
+          "name": "Almaty International Airport",
+          "id": "ALA",
+          "time": "2025-01-07T19:00:00"
+        },
+        "arrival_airport": {
+          "name": "Astana International Airport",
+          "id": "NQZ",
+          "time": "2025-01-07T21:30:00"
+        },
+        "duration": 150,
+        "airplane": "Airbus A320",
+        "airline": "SCAT Airlines",
+        "airline_logo": "https://example.com/logos/scat.png",
+        "travel_class": "Business",
+        "flight_number": "SC678",
+        "extensions": ["Lounge access", "Priority boarding"],
+        "ticket_also_sold_by": ["Orbitz", "Kayak"],
+        "legroom": "32 inches",
+        "overnight": false,
+        "often_delayed_by_over_30_min": true,
+        "transfers": [],
+        "price": 125
+      },
+      {
+        "id": "F014",
+        "departure_airport": {
+          "name": "Almaty International Airport",
+          "id": "ALA",
+          "time": "2025-01-07T20:00:00"
+        },
+        "arrival_airport": {
+          "name": "Astana International Airport",
+          "id": "NQZ",
+          "time": "2025-01-07T22:30:00"
+        },
+        "duration": 150,
+        "airplane": "Airbus A321",
+        "airline": "Air Astana",
+        "airline_logo": "https://example.com/logos/air_astana.png",
+        "travel_class": "Economy",
+        "flight_number": "KC432",
+        "extensions": ["Wi-Fi", "In-flight entertainment"],
+        "ticket_also_sold_by": ["SkyScanner", "Expedia"],
+        "legroom": "31 inches",
+        "overnight": false,
+        "often_delayed_by_over_30_min": false,
+        "transfers": [],
+        "price": 125
+      },
+      {
+        "id": "F015",
+        "departure_airport": {
+          "name": "Almaty International Airport",
+          "id": "ALA",
+          "time": "2025-01-07T21:00:00"
+        },
+        "arrival_airport": {
+          "name": "Astana International Airport",
+          "id": "NQZ",
+          "time": "2025-01-07T23:30:00"
+        },
+        "duration": 150,
+        "airplane": "Boeing 737",
+        "airline": "SCAT Airlines",
+        "airline_logo": "https://example.com/logos/scat.png",
+        "travel_class": "Economy",
+        "flight_number": "SC789",
+        "extensions": ["No extensions available"],
+        "ticket_also_sold_by": ["CheapOair", "Booking.com"],
+        "legroom": "30 inches",
+        "overnight": false,
+        "often_delayed_by_over_30_min": false,
+        "transfers": [],
+        "price": 100
+      }
+    ]
+  }
+  
