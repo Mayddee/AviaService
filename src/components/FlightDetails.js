@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { context } from "../App";
-import { Card, Typography, Row, Col, Divider, Button, List, Tag } from 'antd';
+import { Card, Typography, Row, Col, Divider, Button, List, Modal, Form, Input, notification } from 'antd';
 import './FlightDetails.css';
 
 const FlightDetails = () => {
@@ -9,6 +9,8 @@ const FlightDetails = () => {
   const { originalFlights } = useContext(context);
   const [flightDetails, setFlightDetails] = useState(null);
   const navigate = useNavigate();
+  const [isModalVisible, setIsModalVisible] = useState(false);
+
 
   useEffect(() => {
     const flight = originalFlights.find(f => f.id === id);
@@ -39,6 +41,25 @@ const FlightDetails = () => {
       </div>
     ));
   };
+
+  const handleBookFlight = () => {
+    setIsModalVisible(true);
+  };
+
+  const handleCancel = () => {
+    setIsModalVisible(false);
+  };
+
+  const handleFormSubmit = (values) => {
+    console.log('Booking details:', values);
+    // Show success notification
+    notification.success({
+      message: 'Booking Successful',
+      description: `Flight booked successfully for ${values.name}. We will contact you at ${values.email}.`,
+    });
+    setIsModalVisible(false);
+  };
+
 
   return (
     <div className="flight-details-container">
@@ -87,6 +108,8 @@ const FlightDetails = () => {
               dataSource={flightDetails.extensions}
               renderItem={(item) => <List.Item>{item}</List.Item>}
             />
+            <Button type="primary" onClick={handleBookFlight}>Book Flight</Button>
+
           </Col>
         </Row>
 
@@ -98,6 +121,49 @@ const FlightDetails = () => {
           <Typography.Text>No transfers</Typography.Text>
         )}
       </Card>
+
+      <Modal
+        title="Contact Details for Booking"
+        visible={isModalVisible}
+        onCancel={handleCancel}
+        footer={null}
+      >
+        <Form
+          name="booking-form"
+          onFinish={handleFormSubmit}
+          initialValues={{ name: '', email: '', phone: '' }}
+        >
+          <Form.Item
+            label="Full Name"
+            name="name"
+            rules={[{ required: true, message: 'Please input your full name!' }]}
+          >
+            <Input />
+          </Form.Item>
+
+          <Form.Item
+            label="Email"
+            name="email"
+            rules={[{ required: true, message: 'Please input your email!' }, { type: 'email', message: 'Please input a valid email!' }]}
+          >
+            <Input />
+          </Form.Item>
+
+          <Form.Item
+            label="Phone"
+            name="phone"
+            rules={[{ required: true, message: 'Please input your phone number!' }]}
+          >
+            <Input />
+          </Form.Item>
+
+          <Form.Item>
+            <Button type="primary" htmlType="submit" style={{ width: '100%' }}>
+              Book Flight
+            </Button>
+          </Form.Item>
+        </Form>
+      </Modal>
     </div>
   );
 };
