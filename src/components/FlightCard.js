@@ -10,10 +10,11 @@ const FlightCard = ({ item }) => {
     
     return transfers.map((transfer, index) => (
         <List
+        key={index}
         size="small"
         dataSource={transfers}
         renderItem={(transfer, index) => (
-          <List.Item key={index}>
+          <List.Item >
       
               {transfer.departure_airport.id} , {transfer.arrival_airport.id} 
               {/* {transfers.length} */}

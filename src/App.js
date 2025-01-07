@@ -4,24 +4,28 @@ import TranfersFilter from './components/TransfersFilter';
 import { createContext, useEffect, useState, useMemo, useCallback } from 'react';
 import axios from 'axios';
 import FlightList from './components/FlightList';
+import SearchComponent from './components/Search';
 
 export const context = createContext({});
 
 
 function App() {
-  const [originalFlights, setOriginalFlights] = useState([]); // Store the original data
+  const [originalFlights, setOriginalFlights] = useState([]); 
   const [flights, setFlights] = useState([]);
   const [currentSort, setCurrentSort] = useState(null);
+  const [loading, setLoading] = useState(true); 
 
   useEffect(() => {
     axios
       .get("http://localhost:3031/flights")
       .then((response) => {
-        setOriginalFlights(response.data); // Update originalFlights
-        setFlights(response.data); // Also set flights initially
+        setOriginalFlights(response.data); 
+        setFlights(response.data); 
+        
         console.log("Available flights: ", response.data);
       })
       .catch((err) => console.log("Error when fetching flights: ", err));
+      setLoading(false); 
   }, []);
 
 
@@ -74,6 +78,30 @@ const handleSortChange = (sortOption) => {
   setCurrentSort(sortOption);
 };
 
+const onSearch = useCallback((value) => {
+  console.log('Searching for:', value);
+  if (!originalFlights || originalFlights.length === 0) {
+    console.error("Original flights data is empty or still loading!");
+    return;
+  }
+  if (!value) {
+    setFlights(originalFlights);
+    return;
+  }
+
+  const searchValue = value.toLowerCase();
+
+  const searchedData = originalFlights.filter((flight) => {
+    return [flight.airline, flight.departure_airport.id, flight.arrival_airport.id].some((field) =>
+      field.toLowerCase().includes(searchValue)
+    );
+  });
+
+  setFlights(searchedData); 
+}, [originalFlights]);
+
+
+
   const contextValues = useMemo(
     () => ({
       originalFlights,
@@ -81,7 +109,9 @@ const handleSortChange = (sortOption) => {
       setFlights,
       filterByTransfer,
       sortFlights,
-      handleSortChange
+      handleSortChange,
+      originalFlights,
+      onSearch
     }),
     [originalFlights, flights, setFlights]
   );
@@ -90,8 +120,10 @@ const handleSortChange = (sortOption) => {
     <div className="App" style={{
       marginTop: "50px"
     }}>
+      
       {/* <h1>App</h1> */}
       <context.Provider value={contextValues}>
+        <SearchComponent />
         <div
           style={{
             display: "flex",
