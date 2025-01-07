@@ -52,11 +52,8 @@ const FlightDetails = () => {
 
   const handleFormSubmit = (values) => {
     console.log('Booking details:', values);
-    // Show success notification
-    notification.success({
-      message: 'Booking Successful',
-      description: `Flight booked successfully for ${values.name}. We will contact you at ${values.email}.`,
-    });
+   
+    alert('Booking Successful');
     setIsModalVisible(false);
   };
 
