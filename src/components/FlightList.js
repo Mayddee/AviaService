@@ -15,27 +15,12 @@ const FlightList = () => {
           const [position, setPosition] = useState('Самый дешевый');
 
           useEffect(() => {
-            handleSortChange(position); // Update the current sort in context
-            sortFlights(position); // Apply sorting
+            handleSortChange(position); 
+            sortFlights(position); 
           }, [position, sortFlights, handleSortChange]);
         
 
-        // useEffect(() => {
-        //     if (flights.length) {
-        //       const sortedFlights = sortFlights(flights, position);
-        //       setFlights(sortedFlights);
-        //     }
-        //   }, [position, flights, setFlights, sortFlights]);
-
-
-
-
-        // useEffect(() => {
-        //   if (flights && flights.length > 0) {
-        //     const sortedFlights = sortFlights(flights, position);
-        //     setFlights(sortedFlights);
-        //   }
-        // }, [position, flights, setFlights]);
+      
 
     return <div>
         <Space
