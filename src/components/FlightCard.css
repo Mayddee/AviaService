@@ -1,38 +1,62 @@
 .ant-card {
-    background-color: #f7f7f7;
-    border: none;
-    border-radius: 12px;
-    padding: 16px;
+  background-color: #f7f7f7;
+  border: none;
+  border-radius: 12px;
+  padding: 16px;
+  width: 600px;
+  margin: 20px auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 1920px) {
+  .ant-card {
+    width: 650px;
   }
-  
-  .ant-typography {
-    font-size: 16px;
-    font-weight: bold;
-    color: #1890ff;
+}
+
+@media (max-width: 1366px) {
+  .ant-card {
+    width: 550px;
   }
-  
-  .transfer-info {
-    margin-top: 10px;
+}
+
+@media (max-width: 1024px) {
+  .ant-card {
+    width: 500px;
+    padding: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ant-card {
+    width: 500px;
     padding: 10px;
-    background-color: #f0f8ff;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
-  
+
   .ant-typography {
     font-size: 14px;
-    color: #333;
   }
-  
-  .ant-row {
-    padding-top: 10px;
-    font-weight: bold;
-    font-size: 18px;
-    color: #333;
+
+  .transfer-info {
+    font-size: 12px;
   }
-  
-  .ant-col {
-    display: flex;
-    justify-content: flex-end;
+
+  .ant-card .ant-row {
+    flex-direction: column;
   }
-  
+}
+
+@media (max-width: 320px) {
+  .ant-card {
+    width: 300px;
+    padding: 8px;
+  }
+
+  .ant-typography {
+    font-size: 12px;
+  }
+
+  .transfer-info {
+    font-size: 10px;
+  }
+}

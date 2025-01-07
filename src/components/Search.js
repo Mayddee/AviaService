@@ -4,6 +4,7 @@ import FlightCard from "./FlightCard";
 import { Input, Card, Divider, Button } from 'antd';
 import axios from "axios";
 import { AudioOutlined } from '@ant-design/icons';
+import "./Search.css";
 
 const { Search } = Input;
 
@@ -19,7 +20,7 @@ const SearchComponent = () => {
     const [value, setValue] = useState("");
         
 
-    return <div style={{
+    return <div className="search-bar" style={{
         margin: "30px"
     }}>
         <Search

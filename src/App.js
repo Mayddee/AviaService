@@ -117,26 +117,15 @@ const onSearch = useCallback((value) => {
   );
 
   return (
-    <div className="App" style={{
-      marginTop: "50px"
-    }}>
-      
-      {/* <h1>App</h1> */}
-      <context.Provider value={contextValues}>
-        <SearchComponent />
-        <div
-          style={{
-            display: "flex",
-            flexWrap: "nowrap",
-            flexDirection: "row",
-            justifyContent: "space-around",
-          }}
-        >
-          <TranfersFilter />
-          {flights && <FlightList />}
-        </div>
-      </context.Provider>
-    </div>
+    <div className="App" style={{ marginTop: "50px" }}>
+    <context.Provider value={contextValues}>
+      <SearchComponent className="search-container" />
+      <div className="flights-container">
+        <TranfersFilter />
+        {flights && <FlightList />}
+      </div>
+    </context.Provider>
+  </div>
   );
 }
 

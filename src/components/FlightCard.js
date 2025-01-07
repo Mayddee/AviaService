@@ -34,15 +34,16 @@ const FlightCard = ({ item }) => {
 
   return (
     <Card
-    style={{
-      width: '600px',
-      margin: '20px',
-      borderRadius: '10px',
-      boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-      display: 'flex',
-      flexDirection: 'row',
-      padding: '20px',
-    }}
+    className="ant-card"
+    // style={{
+    //   width: '600px',
+    //   margin: '20px',
+    //   borderRadius: '10px',
+    //   boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+    //   display: 'flex',
+    //   flexDirection: 'row',
+    //   padding: '20px',
+    // }}
     hoverable
   >
     <Row  style={{ flex: 2 }}>

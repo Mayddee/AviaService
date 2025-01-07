@@ -2,6 +2,7 @@ import React, {useContext, useState} from "react";
 import { Card, List, Checkbox, Divider, Typography  } from 'antd';
 import { useColStyle } from "antd/es/grid/style";
 import { context } from "../App";
+import "./TransfersFilter.css";
 
 const { Group: CheckboxGroup } = Checkbox;
 

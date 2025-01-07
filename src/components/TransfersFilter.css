@@ -1,0 +1,30 @@
+.transfer-filter {
+    width: 300px;
+    margin: 0 auto;
+  }
+  
+  @media (max-width: 1366px) {
+    .transfer-filter {
+      width: 250px;
+    }
+  }
+  
+  @media (max-width: 1024px) {
+    .transfer-filter {
+      width: 200px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .transfer-filter {
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 320px) {
+    .transfer-filter {
+      width: 100%;
+      padding: 10px;
+    }
+  }
+  
