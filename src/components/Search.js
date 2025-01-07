@@ -22,14 +22,14 @@ const SearchComponent = () => {
     return <div style={{
         margin: "30px"
     }}>
-        {/* <Search
+        <Search
       placeholder="input search text"
       onSearch={onSearch}
       style={{
         width: 200,
       }}
-    /> */}
-    <div style={{ margin: "30px" }}>
+    />
+    {/* <div style={{ margin: "30px" }}>
   <input
     type="text"
     placeholder="input search text"
@@ -52,7 +52,7 @@ const SearchComponent = () => {
         }}
       >
         Search
-      </Button>
+      </Button>*/}
 
     </div>
 }
