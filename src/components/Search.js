@@ -29,30 +29,7 @@ const SearchComponent = () => {
         width: 200,
       }}
     />
-    {/* <div style={{ margin: "30px" }}>
-  <input
-    type="text"
-    placeholder="input search text"
-    value={value}
-    onChange={(e) => setValue(e.target.value)}
-    
-    style={{
-      width: 200,
-      padding: "5px",
-      fontSize: "16px",
-    }}
-  />
-</div>
-<Button
-        type="primary"
-        onClick={() => onSearch(value)}
-        style={{
-          padding: "5px 15px",
-          fontSize: "16px",
-        }}
-      >
-        Search
-      </Button>*/}
+   
 
     </div>
 }
