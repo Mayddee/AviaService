@@ -87,7 +87,9 @@ const handleSortChange = (sortOption) => {
   );
 
   return (
-    <div className="App">
+    <div className="App" style={{
+      marginTop: "50px"
+    }}>
       {/* <h1>App</h1> */}
       <context.Provider value={contextValues}>
         <div
