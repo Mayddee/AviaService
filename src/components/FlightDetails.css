@@ -1,0 +1,70 @@
+.flight-details-container {
+    padding: 20px;
+  }
+  
+.back-button {
+    margin-bottom: 20px;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 100;
+    font-size: 16px;
+}
+  
+.flight-details-card {
+    padding: 20px;
+    margin-top: 60px;
+}
+  
+@media (max-width: 1920px) {
+    .back-button {
+      font-size: 18px;
+    }
+    .flight-details-card {
+      padding: 40px;
+    }
+}
+  
+@media (max-width: 1366px) {
+    .back-button {
+      font-size: 16px;
+    }
+    .flight-details-card {
+      padding: 30px;
+    }
+  }
+  
+@media (max-width: 1024px) {
+    .back-button {
+      font-size: 14px;
+    }
+    .flight-details-card {
+      padding: 25px;
+    }
+  }
+  
+@media (max-width: 768px) {
+    .back-button {
+      font-size: 12px;
+      top: 10px;
+      left: 10px;
+    }
+    .flight-details-card {
+      padding: 20px;
+    }
+  }
+  
+@media (max-width: 320px) {
+    .back-button {
+      font-size: 10px;
+      top: 5px;
+      left: 5px;
+    }
+    .flight-details-card {
+      padding: 15px;
+    }
+    .flight-details-card .ant-col {
+      padding: 10px;
+    }
+  }
+  

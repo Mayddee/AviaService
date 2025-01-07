@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { context } from "../App";
 import { Card, Divider, Typography, Row, Col, Image, List } from 'antd';
 import './FlightCard.css';
+import { Link } from "react-router-dom";
 
 const FlightCard = ({ item }) => {
   const { flights } = useContext(context);
@@ -33,7 +34,8 @@ const FlightCard = ({ item }) => {
   };
 
   return (
-    <Card
+    <Link to={`/flight/${item.id}`}>
+      <Card
     className="ant-card"
     // style={{
     //   width: '600px',
@@ -88,6 +90,8 @@ const FlightCard = ({ item }) => {
 
     
   </Card>
+    </Link>
+    
   );
 };
 export default FlightCard;

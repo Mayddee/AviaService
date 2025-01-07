@@ -3,8 +3,8 @@
 }
 
 .App .search-container {
-  margin: 0;
-  width: 100%; 
+   margin: 0;
+  width: 100%; /* Adjust width as necessary, or remove if you want it to take its content width */
   max-width: 600px; 
 }
 
